@@ -3,16 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-start_date_1 = "1988/4/1"
-end_date_1 = "1989/5/1"
-symbol_1 = ['^GSPC']
-index_data_1 = web.get_data_yahoo(symbol_1, start_date_1, end_date_1)
-index_price_df_1 = index_data_1['Adj Close']
-
-index_convolution_df_1 = index_price_df_1.rolling(window=20).mean()
-
-index_convolution_1 = index_convolution_df_1['^GSPC'].tolist()
-index_price_1 = index_price_df_1['^GSPC'].tolist()
+print("Hello world")
 index_price_1 = index_price_1[20:]
 index_convolution_1 = index_convolution_1[20:]
 squared_different_1 = [index_price_1[i]-index_convolution_1[i] for i in range(len(index_price_1))]
